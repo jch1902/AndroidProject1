@@ -131,7 +131,7 @@ public class QuestionActivity extends AppCompatActivity {
         question5.setChoiceB("Regulating and promoting state-controlled mass leisure");
         question5.setChoiceC("Hitler youth used to indoctrinate the youth into the beliefs and goals of the regime");
         question5.setChoiceD("Use of propaganda to gain more support for the Nazi party's goals and beliefs");
-        question5.setCorrectAnswer("Mass purges of military officers, intellectuals, lawyers, etc.");
+        question5.setCorrectAnswer("Mass purges of military officers, intellectuals, lawyers, etc. to get rid of any opposition to power");
         questionList.add(question5);
 
 

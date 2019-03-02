@@ -121,7 +121,7 @@
     <RadioGroup
         android:id="@+id/radioGroup"
         android:layout_width="325dp"
-        android:layout_height="289dp"
+        android:layout_height="207dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
@@ -135,14 +135,14 @@
         app:layout_constraintVertical_bias="0.448">
 
         <RadioButton
-            android:id="@+id/answerB"
+            android:id="@+id/answerA"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="RadioButton" />
 
         <RadioButton
-            android:id="@+id/answerA"
+            android:id="@+id/answerB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
