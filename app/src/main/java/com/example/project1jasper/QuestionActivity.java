@@ -42,7 +42,7 @@ public class QuestionActivity extends AppCompatActivity {
         this.submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(answerCheck()){
+                if(currentQuestionNumber < maxScore && answerCheck()){
                     ///////////////////////////////////////////////////////////////////////////////////////////////////////
                     // TO-DO: Set currentQuestion to the next question (because we want to process what is next).
                     // You can set the reference from the questionList.
