@@ -51,7 +51,6 @@ public class ResultActivity extends AppCompatActivity {
         this.buttonPlayAgain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Intent intent = new Intent(ResultActivity.this,
                         com.example.project1jasper.MainActivity.class);
             }

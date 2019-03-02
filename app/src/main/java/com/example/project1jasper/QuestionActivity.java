@@ -89,17 +89,17 @@ public class QuestionActivity extends AppCompatActivity {
 
     //First question
         QuestionNumber question1 = new QuestionNumber();
-        question1.setQuestion("Who is the 45th President?");
-        question1.setChoiceA("Donald Trump");
-        question1.setChoiceB("Barack Obama");
-        question1.setChoiceC("Ronald Reagan");
-        question1.setChoiceD("George H.W. Bush");
-        question1.setCorrectAnswer("Donald Trump");
+        question1.setQuestion("In 'The Prince', what did Machiavelli believe?");
+        question1.setChoiceA("It is better to be feared than loved as a ruler");
+        question1.setChoiceB("Women are incapable of ruling");
+        question1.setChoiceC("It is important to take everyone's needs into consideration");
+        question1.setChoiceD("A prince should not keep prisoners and should execute them");
+        question1.setCorrectAnswer("It is better to be feared than loved as a ruler");
         questionList.add(question1);
 
     //Second question
         QuestionNumber question2 = new QuestionNumber();
-        question2.setQuestion("Where was Napoleon Bonaparte exiled to after his defeat in 1812");
+        question2.setQuestion("Where was Napoleon Bonaparte exiled to after his defeat in 1812?");
         question2.setChoiceA("Paris");
         question2.setChoiceB("London");
         question2.setChoiceC("Elba");
@@ -117,13 +117,22 @@ public class QuestionActivity extends AppCompatActivity {
         questionList.add(question3);
     //Fourth question
         QuestionNumber question4 = new QuestionNumber();
-        question4.setQuestion("");
-        question4.setChoiceA("");
-        question4.setChoiceB("");
-        question4.setChoiceC("");
-        question4.setChoiceD("");
-        question4.setCorrectAnswer("");
+        question4.setQuestion("Which one of the following was most likely an effect of the second Industrial Revolution?");
+        question4.setChoiceA("Development of trains");
+        question4.setChoiceB("Urbanization as more people flocked to the cities to be closer to factories");
+        question4.setChoiceC("Crop failures as farmers went to work in factories");
+        question4.setChoiceD("Agricultural Revolution");
+        question4.setCorrectAnswer("Urbanization as more people flocked to the cities to be closer to factories");
         questionList.add(question4);
+    //Fifth question
+        QuestionNumber question5 = new QuestionNumber();
+        question5.setQuestion("Which of the following was not used by Adolf Hitler to establish his totalitarian regime?");
+        question5.setChoiceA("Mass purges of military officers, intellectuals, lawyers, etc. to get rid of any opposition to power");
+        question5.setChoiceB("Regulating and promoting state-controlled mass leisure");
+        question5.setChoiceC("Hitler youth used to indoctrinate the youth into the beliefs and goals of the regime");
+        question5.setChoiceD("Use of propaganda to gain more support for the Nazi party's goals and beliefs");
+        question5.setCorrectAnswer("Mass purges of military officers, intellectuals, lawyers, etc.");
+        questionList.add(question5);
 
 
         ///////////////////////////////////////////////////////////////////////////////////////////////////////
