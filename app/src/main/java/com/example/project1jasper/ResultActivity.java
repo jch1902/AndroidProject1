@@ -51,8 +51,7 @@ public class ResultActivity extends AppCompatActivity {
         this.buttonPlayAgain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ResultActivity.this,
-                        com.example.project1jasper.MainActivity.class);
+                startAgain();
             }
         });
     }
@@ -60,5 +59,10 @@ public class ResultActivity extends AppCompatActivity {
     private String getPercentage(int current, int total) {
         float fPercent = (float)current/(float)total;
         return Integer.toString((int)Math.ceil((fPercent) * 100)) + "%";
+    }
+    private void startAgain(){
+        Intent intent = new Intent(ResultActivity.this,
+                com.example.project1jasper.MainActivity.class);
+        startActivity(intent);
     }
 }
