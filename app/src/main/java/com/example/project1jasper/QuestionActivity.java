@@ -42,25 +42,30 @@ public class QuestionActivity extends AppCompatActivity {
         this.submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(currentQuestionNumber < maxScore && answerCheck()){
-                    ///////////////////////////////////////////////////////////////////////////////////////////////////////
-                    // TO-DO: Set currentQuestion to the next question (because we want to process what is next).
-                    // You can set the reference from the questionList.
-                    // Use currentQuestionNumber as the index (remember to increment this at the end so that we can fetch the next question index).
-                    ///////////////////////////////////////////////////////////////////////////////////////////////////////
-                    int currentQuestionNumberArray = currentQuestionNumber;
-                    currentQuestionNumber++;
-                    currentNumber = questionList.get(currentQuestionNumberArray);
-                    setQuestionView(currentNumber);
-                }else {
-                    Intent intent = new Intent(QuestionActivity.this,
-                            com.example.project1jasper.ResultActivity.class);
-                    intent.putExtra("currentScore", currentScore);
-                    intent.putExtra("maxScore", maxScore);
-                    startActivity(intent);
-                    // HINT: We want to pass in some extra values for the results class to use. So use something like:
-                    //intent.putExtra(...);
+                if(answerCheck()){
+                    if(currentQuestionNumber < maxScore){
+                        ///////////////////////////////////////////////////////////////////////////////////////////////////////
+                        // TO-DO: Set currentQuestion to the next question (because we want to process what is next).
+                        // You can set the reference from the questionList.
+                        // Use currentQuestionNumber as the index (remember to increment this at the end so that we can fetch the next question index).
+                        ///////////////////////////////////////////////////////////////////////////////////////////////////////
+                        int currentQuestionNumberArray = currentQuestionNumber;
+                        currentQuestionNumber++;
+                        currentNumber = questionList.get(currentQuestionNumberArray);
+                        setQuestionView(currentNumber);
+                        String mxscore = Integer.toString(maxScore);
+                        Log.d("ANSWER: ", mxscore);
+                    }else {
+                        Intent intent = new Intent(QuestionActivity.this,
+                                com.example.project1jasper.ResultActivity.class);
+                        intent.putExtra("currentScore", currentScore);
+                        intent.putExtra("maxScore", maxScore);
+                        startActivity(intent);
+                        // HINT: We want to pass in some extra values for the results class to use. So use something like:
+                        //intent.putExtra(...);
+                    }
                 }
+
             }
         });
         // Intialize the radio buttons for question multiple choice answers.
