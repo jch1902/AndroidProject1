@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -15,7 +16,7 @@ import java.util.ArrayList;
 public class QuestionActivity extends AppCompatActivity {
     private ArrayList<QuestionNumber> questionList = null;
     QuestionNumber currentNumber = null;
-    int currentQuestionNumber = 0;
+    int currentQuestionNumber = 1;
     private int currentScore = 0;
     private int maxScore = 0;
     RadioGroup radioGroup = null;
@@ -46,12 +47,17 @@ public class QuestionActivity extends AppCompatActivity {
                     // You can set the reference from the quizQuestionList.
                     // Use currentQuestionNumber as the index (remember to increment this at the end so that we can fetch the next question index).
                     ///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+                    currentQuestionNumber++;
+                    //this.currentNumber = questionList[currentQuestionNumber];
+
                 }else {
                     Intent intent = new Intent(QuestionActivity.this,
                             com.example.project1jasper.ResultActivity.class);
                     startActivity(intent);
                     // HINT: We want to pass in some extra values for the results class to use. So use something like:
                     //       intent.putExtra(...);
+                   // intent.putExtra(String name, int value)
                 }
             }
         });
@@ -100,12 +106,12 @@ public class QuestionActivity extends AppCompatActivity {
         questionList.add(question2);
     //Third question
         QuestionNumber question3 = new QuestionNumber();
-        question3.setQuestion("");
-        question3.setChoiceA("");
-        question3.setChoiceB("");
-        question3.setChoiceC("");
-        question3.setChoiceD("");
-        question3.setCorrectAnswer("");
+        question3.setQuestion("Which one of the below was an art style developed during the Interwar period?");
+        question3.setChoiceA("Abstract");
+        question3.setChoiceB("German Expressionism");
+        question3.setChoiceC("Realism");
+        question3.setChoiceD("Romanticism");
+        question3.setCorrectAnswer("German Expressionism");
         questionList.add(question3);
     //Fourth question
         QuestionNumber question4 = new QuestionNumber();
@@ -148,7 +154,15 @@ public class QuestionActivity extends AppCompatActivity {
 
         // Clear the radio button checks just encase it was been set previously.
         radioGroup.clearCheck();
-
+        /*
+        *this.scoreView.setText(currentScore);
+        *this.askQuestion.setText(quizQuestion.getQuestion());
+        *this.answerA.setText(quizQuestion.getChoiceA());
+        *this.answerB.setText(quizQuestion.getChoiceB());
+        *this.answerC.setText(quizQuestion.getChoiceC());
+        *this.answerD.setText(quizQuestion.getChoiceD());
+        *this.questionNumber.setText(currentQuestionNumber);
+        */
         // Loads the current question view.
         ///////////////////////////////////////////////////////////////////////////////////////////////////////
         // TO-DO: Set the UI view (all your widgets) with the current QuizQuestion passed in.
