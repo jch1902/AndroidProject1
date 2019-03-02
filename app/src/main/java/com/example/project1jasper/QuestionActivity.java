@@ -141,7 +141,7 @@ public class QuestionActivity extends AppCompatActivity {
         //this.currentQuestion = /*Your first question*/;
         this.currentNumber = question1;
         // Set the current, score, and total question size.
-        this.currentQuestionNumber = 0;
+        this.currentQuestionNumber = 1;
         this.maxScore = this.questionList.size();
         this.currentScore = 0;
     }
@@ -154,15 +154,16 @@ public class QuestionActivity extends AppCompatActivity {
 
         // Clear the radio button checks just encase it was been set previously.
         radioGroup.clearCheck();
-        /*
-        *this.scoreView.setText(currentScore);
-        *this.askQuestion.setText(quizQuestion.getQuestion());
-        *this.answerA.setText(quizQuestion.getChoiceA());
-        *this.answerB.setText(quizQuestion.getChoiceB());
-        *this.answerC.setText(quizQuestion.getChoiceC());
-        *this.answerD.setText(quizQuestion.getChoiceD());
-        *this.questionNumber.setText(currentQuestionNumber);
-        */
+        String scoreString = Integer.toString(currentScore);
+        String currentQuestionNumberString = Integer.toString(currentQuestionNumber);
+        scoreView.setText(scoreString);
+        askQuestion.setText(quizQuestion.getQuestion());
+        answerA.setText(quizQuestion.getChoiceA());
+        answerB.setText(quizQuestion.getChoiceB());
+        answerC.setText(quizQuestion.getChoiceC());
+        answerD.setText(quizQuestion.getChoiceD());
+        questionNumber.setText(currentQuestionNumberString);
+
         // Loads the current question view.
         ///////////////////////////////////////////////////////////////////////////////////////////////////////
         // TO-DO: Set the UI view (all your widgets) with the current QuizQuestion passed in.
