@@ -15,6 +15,7 @@ import java.util.ArrayList;
 
 public class QuestionActivity extends AppCompatActivity {
     private ArrayList<QuestionNumber> questionList = null;
+
     QuestionNumber currentNumber = null;
     int currentQuestionNumber = 1;
     private int currentScore = 0;
@@ -44,20 +45,20 @@ public class QuestionActivity extends AppCompatActivity {
                 if(answerCheck()){
                     ///////////////////////////////////////////////////////////////////////////////////////////////////////
                     // TO-DO: Set currentQuestion to the next question (because we want to process what is next).
-                    // You can set the reference from the quizQuestionList.
+                    // You can set the reference from the questionList.
                     // Use currentQuestionNumber as the index (remember to increment this at the end so that we can fetch the next question index).
                     ///////////////////////////////////////////////////////////////////////////////////////////////////////
-
+                    int currentQuestionNumberArray = currentQuestionNumber;
                     currentQuestionNumber++;
-                    //this.currentNumber = questionList[currentQuestionNumber];
-
+                    currentNumber = questionList.get(currentQuestionNumberArray);
+                    setQuestionView(currentNumber);
                 }else {
                     Intent intent = new Intent(QuestionActivity.this,
                             com.example.project1jasper.ResultActivity.class);
+                    intent.putExtra("RESULTS", currentScore);
                     startActivity(intent);
                     // HINT: We want to pass in some extra values for the results class to use. So use something like:
-                    //       intent.putExtra(...);
-                   // intent.putExtra(String name, int value)
+                    //intent.putExtra(...);
                 }
             }
         });
@@ -99,7 +100,7 @@ public class QuestionActivity extends AppCompatActivity {
         QuestionNumber question2 = new QuestionNumber();
         question2.setQuestion("Where was Napoleon Bonaparte exiled to after his defeat in 1812");
         question2.setChoiceA("Paris");
-        question2.setChoiceB("london");
+        question2.setChoiceB("London");
         question2.setChoiceC("Elba");
         question2.setChoiceD("St. Helena");
         question2.setCorrectAnswer("Elba");
@@ -122,15 +123,6 @@ public class QuestionActivity extends AppCompatActivity {
         question4.setChoiceD("");
         question4.setCorrectAnswer("");
         questionList.add(question4);
-        ///////////////////////////////////////////////////////////////////////////////////////////////////////
-        // TO-DO: Create instances (using the new QuizQuestion()) of your questions.
-        // You will have to call into QuizQuestion() setters to set the follow:
-        // - The question to ask.
-        // - Set choice options for A, B, C, and D.
-        // - Set the correct answer (so that class knows which one is correct or not).
-        // - Remember to add the object to our quizQuestionList array. Hint: Use .add(...) function here.
-        // NOTE: No widgets should be set in this method.
-        ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
         ///////////////////////////////////////////////////////////////////////////////////////////////////////

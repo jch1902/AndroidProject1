@@ -57,9 +57,13 @@ public class QuestionNumber {
     }
 
     protected boolean isCorrectAnswer(String answer) {
+
+        boolean correctAnswer = answer.equals(this.correctAnswer);
         if (this.correctAnswer == null) {
             // No correct answer has been set.
             return false;
+        }else if(correctAnswer){
+            return true;
         }
         /////////////////////////////////////////////////
         // TO-DO: Compare the passed in answer with the class' correct answer.
