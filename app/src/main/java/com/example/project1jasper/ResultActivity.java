@@ -1,9 +1,11 @@
 package com.example.project1jasper;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
+import android.view.View;
 
 import org.w3c.dom.Text;
 
@@ -43,13 +45,15 @@ public class ResultActivity extends AppCompatActivity {
         String maxScoreStr = Integer.toString(maxScore);
         textViewScore.setText(finalScore);
         Total.setText(maxScoreStr);
+        textViewResultDescription.setText("You answered " + getPercentage(curScore,maxScore) +" of the questions correctly.");
 
         this.buttonPlayAgain = (Button)findViewById(R.id.button);
         this.buttonPlayAgain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent
+                Intent intent = new Intent(ResultActivity.this,
+                        com.example.project1jasper.MainActivity.class);
             }
         });
     }
