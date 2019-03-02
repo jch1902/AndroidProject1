@@ -55,7 +55,8 @@ public class QuestionActivity extends AppCompatActivity {
                 }else {
                     Intent intent = new Intent(QuestionActivity.this,
                             com.example.project1jasper.ResultActivity.class);
-                    intent.putExtra("RESULTS", currentScore);
+                    intent.putExtra("currentScore", currentScore);
+                    intent.putExtra("maxScore", maxScore);
                     startActivity(intent);
                     // HINT: We want to pass in some extra values for the results class to use. So use something like:
                     //intent.putExtra(...);
